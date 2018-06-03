@@ -36,6 +36,10 @@ class Register extends Component {
   }
 
   componentWillReceiveProps(newProps){
+    if(localStorage.getItem("token")){
+      true;
+    }
+
     if(newProps.user.isAdmin){
       this.props.history.replace("/admin/dashboard", null);
     } else {
